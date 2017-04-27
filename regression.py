@@ -48,7 +48,7 @@ x_train, x_test, y_train, y_test = model_selection.train_test_split(x,y, test_si
 pickle_in = open('linearregression.pickle', 'rb')
 clf = pickle.load(pickle_in)
 
-#accuracy = clf.score(x_test,y_test)
+accuracy = clf.score(x_test,y_test)
 forecast_set = clf.predict(x_lately)
 print(forecast_set, accuracy, forecast_out)
 df['Forecast'] = np.nan
